@@ -23,6 +23,6 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
   app.enableCors(); //Permite que requisições de fora sejam aceitas
 
-  await app.listen(port);
+  await app.listen(process.env.PORT || 4000);
 }
 bootstrap();
